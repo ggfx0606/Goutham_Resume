@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goutham Gunasekaran | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f7f8;
+            --surface: #ffffff;
+            --ink: #1f2a33;
+            --muted: #4b5b67;
+            --accent: #005a7a;
+            --accent-soft: #d7ecf4;
+            --line: #d8e0e5;
+            --chip: #ecf2f5;
+            --shadow: 0 12px 28px rgba(24, 44, 56, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Source Sans 3", "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 15% 15%, #e9f4f8 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, #e7f0f3 0%, transparent 35%),
+                var(--bg);
+            line-height: 1.55;
+            padding: 28px 16px;
+        }
+
+        .resume {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #0d3f57 0%, #005a7a 68%, #0f6a8d 100%);
+            color: #f8fdff;
+            padding: 34px 36px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-family: "Lora", Georgia, serif;
+            font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+            line-height: 1.15;
+            letter-spacing: 0.2px;
+        }
+
+        .role {
+            margin: 8px 0 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #d5eef8;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.98rem;
+        }
+
+        .contact span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            padding: 5px 12px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 0;
+        }
+
+        .main,
+        .side {
+            padding: 28px 30px;
+        }
+
+        .side {
+            border-left: 1px solid var(--line);
+            background: linear-gradient(180deg, #fbfdfe 0%, #f3f8fa 100%);
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-family: "Lora", Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--accent);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.35;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: var(--muted);
+            margin: 2px 0 8px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin: 8px 0 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .entry {
+            margin-bottom: 16px;
+        }
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            border: 1px solid var(--line);
+            background: #ffffff;
+        }
+
+        .skills-table th,
+        .skills-table td {
+            border: 1px solid var(--line);
+            padding: 8px 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .skills-table th {
+            width: 34%;
+            background: #edf4f8;
+            color: #17475f;
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 860px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .side {
+                border-left: 0;
+                border-top: 1px solid var(--line);
+            }
+
+            .hero,
+            .main,
+            .side {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="resume">
+        <header class="hero">
+            <h1>Goutham Gunasekaran</h1>
+            <p class="role">Automotive Embedded Software Technical Lead</p>
+            <div class="contact">
+                <span>Phone: +91-9976347576</span>
+                <span>Email: ggfx0606@gmail.com</span>
+                <span>Location: Coimbatore, Tamil Nadu, India</span>
+                <span>Nationality: Indian</span>
+                <span>Open to relocation across Europe</span>
+                <span>Visa sponsorship required</span>
+            </div>
+        </header>
+
+        <section class="content">
+            <main class="main">
+                <section class="section">
+                    <h2>Professional Summary</h2>
+                    <p>
+                        Automotive Embedded Software Technical Lead with 10+ years of experience in AUTOSAR-based ECU
+                        application development, body electronics, HVAC climate control, and SDV features. Currently
+                        leading application SWC development for Mahindra BEV 6e and BE 9e electric vehicles, delivering
+                        front/rear lamp welcome and goodbye animations, SDV surprise message features, and dual-zone
+                        manual HVAC climate-control software.
+                    </p>
+                    <div class="highlight-box">
+                        Expert in Embedded C and Rust, state-machine design, CAN/CAN FD, BSW configuration, ASPICE-compliant,
+                        supplier coordination, and cross-functional team leadership.
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Experience</h2>
+                    <div class="entry">
+                        <h3>Lead Engineer - Application Software, Mahindra and Mahindra Ltd</h3>
+                        <p class="meta">Mahindra Software Defined Vehicle Centre (MSDVC) | May 2023 - Present</p>
+                        <ul>
+                            <li>Lead application software development for BEV 6e and BE 9e electric-vehicle platforms.</li>
+                            <li>Delivered front and rear lamp welcome/goodbye animations using scalable state-machine architecture.</li>
+                            <li>Implemented SDV customizable surprise-message animation feature for personalized lighting behavior.</li>
+                            <li>Lead ETC dual-zone manual HVAC module software for temperature, blower, and air-distribution control.</li>
+                            <li>Managed end-to-end SDLC aligned to ASPICE SWE.1-SWE.6 and guided suppliers through technical reviews.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>Senior Embedded Engineer, IQuants Engineering Solutions Pvt Ltd</h3>
+                        <p class="meta">Feb 2020 - Apr 2023</p>
+                        <ul>
+                            <li>Developed AUTOSAR-compliant embedded software from requirements through integration testing.</li>
+                            <li>Configured BSW modules (NvM, MemIf, Fee, Com, PduR, CanIf) using DaVinci Configurator Pro and EB tresos.</li>
+                            <li>Integrated EEPROM NVM stack into bootloader for persistent data handling during ECU reflashing.</li>
+                            <li>Performed RTE generation and interface mapping using DaVinci Developer.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>Self-Employed (Freelance), Solar Panel Installation Engineer</h3>
+                        <p class="meta">Feb 2017 - Jan 2020</p>
+                        <ul>
+                            <li>Delivered residential and commercial solar projects from site study to commissioning.</li>
+                            <li>Handled electrical design, safety compliance, planning, procurement, and execution management.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>Assistant Engineer, STEPS Knowledge Services Pvt Ltd</h3>
+                        <p class="meta">May 2015 - Jan 2017</p>
+                        <ul>
+                            <li>Designed, coded, and maintained AUTOSAR application SWCs for Audio Amplifier ECU projects.</li>
+                            <li>Built integration test cases from architecture design with full requirements traceability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="entry">
+                        <h3>Embedded Developer, ACME Systems</h3>
+                        <p class="meta">Jul 2012 - Mar 2015</p>
+                        <ul>
+                            <li>Developed embedded C application software components for automotive ECU projects.</li>
+                            <li>Contributed to Electric Power Steering control models using MATLAB/Simulink.</li>
+                            <li>Performed Polyspace-based static analysis for MISRA C compliance.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2>Key Projects</h2>
+                    <ul>
+                        <li>Front and rear lamp welcome/goodbye animations for Mahindra BEV 6e / BE 9e using AUTOSAR and Embedded C.</li>
+                        <li>SDV customizable surprise-message lighting feature for over-the-air personalization use cases.</li>
+                        <li>Dual-zone manual HVAC climate-control module for independent driver/passenger comfort logic.</li>
+                        <li>Electric Power Steering contribution for Nexteer with Simulink models and MISRA-focused static analysis.</li>
+                        <li>Audio Amplifier ECU delivery with AUTOSAR RTE integration and requirements-to-test traceability.</li>
+                    </ul>
+                </section>
+            </main>
+
+            <aside class="side">
+                <section class="section">
+                    <h2>Core Technical Skills</h2>
+                    <table class="skills-table">
+                        <tbody>
+                            <tr>
+                                <th>Programming</th>
+                                <td>Embedded C, C++, Rust</td>
+                            </tr>
+                            <tr>
+                                <th>Domains</th>
+                                <td>Body Electronics, HVAC / Climate Control, SDV Features, Lighting (LED Animations), Electric Power Steering</td>
+                            </tr>
+                            <tr>
+                                <th>Architecture</th>
+                                <td>AUTOSAR (Classic), State Machine Design, 3-Layer SWC Architecture, RTE Configuration and Generation</td>
+                            </tr>
+                            <tr>
+                                <th>BSW Modules</th>
+                                <td>NvM, MemIf, Fee/Ea, Com, PduR, CanIf, Crypto Stack, MCAL, OS</td>
+                            </tr>
+                            <tr>
+                                <th>Protocols</th>
+                                <td>CAN, CAN FD, LIN, SPI, UART, I2C, ADC, PWM</td>
+                            </tr>
+                            <tr>
+                                <th>AUTOSAR Tools</th>
+                                <td>DaVinci Configurator Pro, DaVinci Developer, EB tresos, Enterprise Architect</td>
+                            </tr>
+                            <tr>
+                                <th>Testing and Analysis</th>
+                                <td>VectorCAST, Polyspace (MISRA C), CANoe, VFlash, Logical Analyzer, Oscilloscope</td>
+                            </tr>
+                            <tr>
+                                <th>Requirements</th>
+                                <td>IBM DOORS, Microsoft Visure, Reqtify</td>
+                            </tr>
+                            <tr>
+                                <th>PCB and Schematic</th>
+                                <td>Altium Designer, EasyEDA</td>
+                            </tr>
+                            <tr>
+                                <th>IDEs and Build</th>
+                                <td>IAR Embedded Workbench, GHS, CodeComposer Studio</td>
+                            </tr>
+                            <tr>
+                                <th>Project Tools</th>
+                                <td>JIRA, Gerrit, Git</td>
+                            </tr>
+                            <tr>
+                                <th>Scripting and Tooling</th>
+                                <td>Python Tkinter (Windows automation tools)</td>
+                            </tr>
+                            <tr>
+                                <th>Standards</th>
+                                <td>ASPICE (SWE.1-SWE.6), MISRA C</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="section">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English (Full Professional Proficiency)</li>
+                        <li>Deutsch (Beginner)</li>
+                        <li>Tamil (Native)</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2>Certifications</h2>
+                    <ul>
+                        <li>National Instruments LabVIEW Core-1</li>
+                        <li>Vector Tools Training Program (CANoe, CAPL, UDS)</li>
+                    </ul>
+                </section>
+
+                <section class="section">
+                    <h2>Education</h2>
+                    <p>B.E. in Electronics and Communication Engineering</p>
+                    <p class="meta">VRS College of Engineering and Technology, Anna University</p>
+                </section>
+            </aside>
+        </section>
+    </article>
+</body>
+</html>
