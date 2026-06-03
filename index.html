@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goutham Gunasekaran | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f7f8;
+            --surface: #ffffff;
+            --ink: #1f2a33;
+            --muted: #4b5b67;
+            --accent: #005a7a;
+            --accent-soft: #d7ecf4;
+            --line: #d8e0e5;
+            --chip: #ecf2f5;
+            --shadow: 0 12px 28px rgba(24, 44, 56, 0.1);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Source Sans 3", "Segoe UI", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 15% 15%, #e9f4f8 0%, transparent 45%),
+                radial-gradient(circle at 85% 85%, #e7f0f3 0%, transparent 35%),
+                var(--bg);
+            line-height: 1.55;
+            padding: 28px 16px;
+        }
+
+        .resume {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px 0;
+            background: #ffffff;
+        }
+
+        .tab-btn {
+            border: 1px solid var(--line);
+            background: #f3f8fa;
+            color: var(--muted);
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }
+
+        .panel-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 16px 12px;
+            background: #ffffff;
+        }
+
+        .download-btn {
+            border: 1px solid #0f6588;
+            background: linear-gradient(120deg, #0f6a8d 0%, #005a7a 100%);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 9px 14px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            cursor: pointer;
+        }
+
+        .download-btn:disabled { opacity: 0.72; cursor: not-allowed; }
+
+        .hero {
+            background: linear-gradient(120deg, #0d3f57 0%, #005a7a 68%, #0f6a8d 100%);
+            color: #f8fdff;
+            padding: 34px 36px;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-family: "Lora", Georgia, serif;
+            font-size: clamp(1.75rem, 2.8vw, 2.5rem);
+            line-height: 1.15;
+        }
+
+        .role {
+            margin: 8px 0 16px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #d5eef8;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.98rem;
+        }
+
+        .contact span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+            padding: 5px 12px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 0;
+        }
+
+        .main, .side { padding: 28px 30px; }
+
+        .side {
+            border-left: 1px solid var(--line);
+            background: linear-gradient(180deg, #fbfdfe 0%, #f3f8fa 100%);
+        }
+
+        .section { margin-bottom: 24px; }
+        .section:last-child { margin-bottom: 0; }
+
+        h2 {
+            margin: 0 0 12px;
+            font-family: "Lora", Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--accent);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+        }
+
+        h3 { margin: 0; font-size: 1.05rem; line-height: 1.35; }
+
+        .meta { font-size: 0.95rem; color: var(--muted); margin: 2px 0 8px; }
+        p { margin: 0; }
+        ul { margin: 8px 0 0; padding-left: 18px; }
+        li { margin-bottom: 6px; }
+        .entry { margin-bottom: 16px; }
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            border: 1px solid var(--line);
+            background: #ffffff;
+        }
+
+        .skills-table th,
+        .skills-table td {
+            border: 1px solid var(--line);
+            padding: 8px 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        .skills-table th {
+            width: 34%;
+            background: #edf4f8;
+            color: #17475f;
+            font-weight: 700;
+        }
+
+        .skills-table td ul { margin: 0; padding-left: 16px; }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 860px) {
+            .content { grid-template-columns: 1fr; }
+            .side { border-left: 0; border-top: 1px solid var(--line); }
+            .hero, .main, .side { padding: 24px 20px; }
+            .tabs, .panel-actions { padding-left: 10px; padding-right: 10px; }
+            .download-btn { width: 100%; }
+        }
+
+        /* ===== PRINT STYLES (used by Download Profile via window.print) ===== */
+        @page {
+            size: A4;
+            margin: 10mm;
+        }
+
+        @media print {
+            html, body {
+                background: #ffffff !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .tabs, .panel-actions { display: none !important; }
+
+            .resume {
+                max-width: none !important;
+                width: 100% !important;
+                margin: 0 !important;
+                border: 0 !important;
+                border-radius: 0 !important;
+                box-shadow: none !important;
+                overflow: visible !important;
+            }
+
+            /* Use a table layout for the two columns so it paginates
+               cleanly across pages instead of leaving page 1 blank. */
+            .content {
+                display: table !important;
+                width: 100% !important;
+                table-layout: fixed !important;
+                border-collapse: collapse !important;
+            }
+
+            .main, .side {
+                display: table-cell !important;
+                vertical-align: top !important;
+            }
+
+            .main { width: 58% !important; }
+            .side {
+                width: 42% !important;
+                border-left: 1px solid var(--line) !important;
+                border-top: 0 !important;
+                background: #f6fafc !important;
+            }
+
+            .hero {
+                padding: 14px 18px !important;
+                background: linear-gradient(120deg, #0d3f57 0%, #005a7a 68%, #0f6a8d 100%) !important;
+                color: #f8fdff !important;
+            }
+            .main, .side { padding: 14px 18px !important; }
+
+            .hero h1 { font-size: 1.6rem !important; margin: 0 !important; }
+            .role { font-size: 0.95rem !important; margin: 3px 0 8px !important; }
+            .contact { font-size: 0.8rem !important; gap: 5px !important; }
+            .contact span { padding: 2px 8px !important; }
+
+            h2 { font-size: 0.95rem !important; margin-bottom: 8px !important; }
+            h3 { font-size: 0.95rem !important; }
+            p, li, .skills-table { font-size: 0.85rem !important; }
+            .meta { font-size: 0.8rem !important; }
+
+            .section { margin-bottom: 14px !important; }
+            .entry { margin-bottom: 10px !important; }
+            li { margin-bottom: 3px !important; }
+
+            .section, .entry, .skills-table tr, .highlight-box {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="resume">
+        <nav class="tabs" aria-label="Profile Tabs">
+            <button type="button" class="tab-btn active" aria-selected="true">About Me</button>
+        </nav>
+
+        <section class="tab-panel" id="about-me">
+            <div class="panel-actions">
+                <button type="button" class="download-btn" id="downloadProfileBtn">Download Profile</button>
+            </div>
+
+            <div id="profile-content">
+
+
+                <section class="content">
+                    <main class="main">
+                        <section class="section">
+                            <header class="hero">
+                            <h1>Goutham Gunasekaran</h1>
+                            <p class="role">Automotive Embedded Software Technical Lead</p>
+                            <div class="contact">
+
+                            <span>Phone: +91-9976347576</span>
+                            <span>Email: ggfx0606@gmail.com</span>
+                            <span>Location: Coimbatore, Tamil Nadu, India</span>
+                            <span>Nationality: Indian</span>
+                            <span>Open to relocation across Europe</span>
+                            <span>Visa sponsorship required</span>
+
+                            </div>
+                            </header>
+                            <h2>Professional Summary</h2>
+                            <p>
+                                Automotive Embedded Software Technical Lead with 10+ years of experience in AUTOSAR-based ECU
+                                application development, body electronics, HVAC climate control, and SDV features. Currently
+                                leading application SWC development for Mahindra BEV 6e and BE 9e electric vehicles, delivering
+                                front/rear lamp welcome and goodbye animations, SDV surprise message features, and dual-zone
+                                manual HVAC climate-control software.
+                            </p>
+                            <div class="highlight-box">
+                                <ul>
+                                <li>Expert in Embedded C and Rust</li>
+                                <li>State-machine design</li>
+                                <li>Application Software Integrater</li>
+                                <li>BSW configuration</li>
+                                <li>Supplier coordination</li>
+                                <li>Cross-functional team leadership</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Experience</h2>
+                            <div class="entry">
+                                <h3>Lead Engineer - Application Software, Mahindra and Mahindra Ltd</h3>
+                                <p class="meta">Mahindra Software Defined Vehicle Centre (MSDVC) | May 2023 - Present</p>
+                                <ul>
+                                    <li>Lead application software development for BEV 6e and BE 9e electric-vehicle platforms.</li>
+                                    <li>Delivered front and rear lamp welcome/goodbye animations using scalable state-machine architecture.</li>
+                                    <li>Implemented SDV customizable surprise-message animation feature for personalized lighting behavior.</li>
+                                    <li>Lead ETC dual-zone manual HVAC module software for temperature, blower, and air-distribution control.</li>
+                                    <li>Managed end-to-end SDLC aligned to ASPICE SWE.1-SWE.6 and guided suppliers through technical reviews.</li>
+                                </ul>
+                            </div>
+
+                            <div class="entry">
+                                <h3>Senior Embedded Engineer, IQuants Engineering Solutions Pvt Ltd</h3>
+                                <p class="meta">Feb 2020 - Apr 2023</p>
+                                <ul>
+                                    <li>Developed AUTOSAR-compliant embedded software from requirements through integration testing.</li>
+                                    <li>Configured BSW modules (NvM, MemIf, Fee, Com, PduR, CanIf) using DaVinci Configurator Pro and EB tresos.</li>
+                                    <li>Integrated EEPROM NVM stack into bootloader for persistent data handling during ECU reflashing.</li>
+                                    <li>Performed RTE generation and interface mapping using DaVinci Developer.</li>
+                                </ul>
+                            </div>
+
+                            <div class="entry">
+                                <h3>Self-Employed (Freelance), Solar Panel Installation Engineer</h3>
+                                <p class="meta">Feb 2017 - Jan 2020</p>
+                                <ul>
+                                    <li>Delivered residential and commercial solar projects from site study to commissioning.</li>
+                                    <li>Handled electrical design, safety compliance, planning, procurement, and execution management.</li>
+                                </ul>
+                            </div>
+
+                            <div class="entry">
+                                <h3>Assistant Engineer, STEPS Knowledge Services Pvt Ltd</h3>
+                                <p class="meta">May 2015 - Jan 2017</p>
+                                <ul>
+                                    <li>Designed, coded, and maintained AUTOSAR application SWCs for Audio Amplifier ECU projects.</li>
+                                    <li>Built integration test cases from architecture design with full requirements traceability.</li>
+                                </ul>
+                            </div>
+
+                            <div class="entry">
+                                <h3>Embedded Developer, ACME Systems</h3>
+                                <p class="meta">Jul 2012 - Mar 2015</p>
+                                <ul>
+                                    <li>Developed embedded C application software components for automotive ECU projects.</li>
+                                    <li>Contributed to Electric Power Steering control models using MATLAB/Simulink.</li>
+                                    <li>Performed Polyspace-based static analysis for MISRA C compliance.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Key Projects</h2>
+                            <ul>
+                                <li>Front and rear lamp welcome/goodbye animations for Mahindra BEV 6e / BE 9e using AUTOSAR and Embedded C.</li>
+                                <li>SDV customizable surprise-message lighting feature for over-the-air personalization use cases.</li>
+                                <li>Dual-zone manual HVAC climate-control module for independent driver/passenger comfort logic.</li>
+                                <li>Electric Power Steering contribution for Nexteer with Simulink models and MISRA-focused static analysis.</li>
+                                <li>Audio Amplifier ECU delivery with AUTOSAR RTE integration and requirements-to-test traceability.</li>
+                            </ul>
+                        </section>
+                    </main>
+
+                    <aside class="side">
+                        <section class="section">
+                            <h2>Core Technical Skills</h2>
+                            <table class="skills-table">
+                                <tbody>
+                                    <tr>
+                                        <th>Programming</th>
+                                        <td>Embedded C, C++, Rust</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Domains</th>
+                                        <td><ul><li>Body Electronics</li><li>HVAC / Climate Control</li><li>SDV Features</li><li>Lighting (LED Animations)</li><li>Electric Power Steering</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Architecture</th>
+                                        <td><ul><li>AUTOSAR (Classic)</li><li>State Machine Design</li><li>3-Layer SWC Architecture</li><li>RTE Configuration and Generation</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>BSW Modules</th>
+                                        <td><ul><li>NvM</li><li>MemIf</li><li>Fee/Ea</li><li>Com</li><li>PduR</li><li>CanIf</li><li>Crypto Stack</li><li>MCAL</li><li>OS</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Protocols</th>
+                                        <td><ul><li>Automotive Ethernet</li><li>SOME/IP</li><li>CAN</li><li>CAN FD</li><li>LIN</li><li>SPI</li><li>UART</li><li>I2C</li><li>ADC</li><li>PWM</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>AUTOSAR Tools</th>
+                                        <td><ul><li>DaVinci Configurator Pro</li><li>DaVinci Developer</li><li>EB tresos</li><li>Enterprise Architect</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Testing and Analysis</th>
+                                        <td><ul><li>VectorCAST</li><li>Polyspace (MISRA C)</li><li>CANoe</li><li>VFlash</li><li>Logical Analyzer</li><li>Oscilloscope</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Requirements</th>
+                                        <td><ul><li>IBM DOORS</li><li>Microsoft Visure</li><li>Reqtify</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>PCB and Schematic</th>
+                                        <td><ul><li>Altium Designer</li><li>EasyEDA</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>IDEs and Build</th>
+                                        <td><ul><li>IAR Embedded Workbench</li><li>GHS</li><li>CodeComposer Studio</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Project Tools</th>
+                                        <td><ul><li>JIRA</li><li>Gerrit</li><li>Git</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Scripting and Tooling</th>
+                                        <td><ul><li>Rust (windows Application using Tokio)</li><li>Python Tkinter (Windows automation tools)</li></ul></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Standards</th>
+                                        <td>ASPICE (SWE.1-SWE.6), MISRA C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="section">
+                            <h2>Languages</h2>
+                            <ul>
+                                <li>English (Full Professional Proficiency)</li>
+                                <li>Deutsch (Beginner)</li>
+                                <li>Tamil (Native)</li>
+                            </ul>
+                        </section>
+
+                        <section class="section">
+                            <h2>Certifications</h2>
+                            <ul>
+                                <li>National Instruments LabVIEW Core-1</li>
+                                <li>Vector Tools Training Program (CANoe, CAPL, UDS)</li>
+                            </ul>
+                        </section>
+
+                        <section class="section">
+                            <h2>Education</h2>
+                            <p>B.E. in Electronics and Communication Engineering</p>
+                            <p class="meta">VRS College of Engineering and Technology, Anna University</p>
+                        </section>
+                    </aside>
+                </section>
+            </div>
+        </section>
+    </article>
+
+    <script>
+        /*
+         * Download Profile -> opens a hidden iframe with the live profile content
+         * and triggers the browser's native Print-to-PDF dialog. This guarantees:
+         *   1. Pixel-perfect A4 alignment via @page + print CSS.
+         *   2. Automatic inclusion of every future edit to the profile.
+         *   3. No third-party canvas scaling / clipping bugs.
+         *
+         * In the browser print dialog, choose "Save as PDF" as the destination.
+         */
+        const downloadProfileBtn = document.getElementById("downloadProfileBtn");
+
+        downloadProfileBtn.addEventListener("click", async () => {
+            const previousText = downloadProfileBtn.textContent;
+            downloadProfileBtn.disabled = true;
+            downloadProfileBtn.textContent = "Preparing Download...";
+
+            try {
+                if (document.fonts && document.fonts.ready) {
+                    await document.fonts.ready;
+                }
+
+                const profileHTML = document.getElementById("profile-content").outerHTML;
+                const styleHTML = Array.from(
+                    document.querySelectorAll("style, link[rel='stylesheet']")
+                ).map((el) => el.outerHTML).join("\n");
+
+                const printDoc = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Goutham_Gunasekaran_Profile</title>
+${styleHTML}
+<style>
+    body { padding: 0 !important; background: #ffffff !important; }
+    .resume {
+        max-width: none !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+</style>
+</head>
+<body>
+<article class="resume">${profileHTML}</article>
+</body>
+</html>`;
+
+                const iframe = document.createElement("iframe");
+                iframe.style.position = "fixed";
+                iframe.style.right = "0";
+                iframe.style.bottom = "0";
+                iframe.style.width = "0";
+                iframe.style.height = "0";
+                iframe.style.border = "0";
+                document.body.appendChild(iframe);
+
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                doc.open();
+                doc.write(printDoc);
+                doc.close();
+
+                await new Promise((resolve) => {
+                    const finish = async () => {
+                        try {
+                            if (iframe.contentDocument && iframe.contentDocument.fonts) {
+                                await iframe.contentDocument.fonts.ready;
+                            }
+                        } catch (_) { /* ignore */ }
+                        resolve();
+                    };
+                    if (iframe.contentDocument.readyState === "complete") {
+                        finish();
+                    } else {
+                        iframe.addEventListener("load", finish, { once: true });
+                    }
+                });
+
+                await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+
+                setTimeout(() => {
+                    if (iframe.parentNode) {
+                        iframe.parentNode.removeChild(iframe);
+                    }
+                }, 1500);
+            } finally {
+                downloadProfileBtn.disabled = false;
+                downloadProfileBtn.textContent = previousText;
+            }
+        });
+    </script>
+</body>
+</html>
